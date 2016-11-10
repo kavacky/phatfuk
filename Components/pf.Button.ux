@@ -1,0 +1,10 @@
+<Panel ux:Class="pf.Button">
+	<string ux:Property="Caption" />
+	<Button Height="40" Padding="10, 0, 10, 0" Margin="20, 10, 20, 10">
+		<Text Value="{Property Caption}" Color="#F8F8F2" Alignment="Center" TextAlignment="Center" />
+        <Rectangle Layer="Background">
+            <Stroke Width="1" Brush="#F8F8F2" />
+        </Rectangle>
+	</Button>
+</Panel>
+				

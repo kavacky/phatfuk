@@ -1,0 +1,3 @@
+<Page ux:Class="pf.Page" ux:Name="self" HitTestMode="LocalBoundsAndChildren" Color="#272922">
+	<DockLayout />
+</Page>

@@ -1,0 +1,46 @@
+<App>
+	<JavaScript File="Main.js" />
+
+	<ClientPanel>
+        <Android.StatusBarConfig IsVisible="false" />
+
+		<PageControl>
+			<pf.Page>
+				<StackPanel Alignment="CenterLeft" Width="100%">
+					<pf.Input ux:Name="weight" Value="{weight}" Placeholder="Weight..." />
+					<pf.Input ux:Name="notes" Value="{notes}" Placeholder="Notes..." />
+					<pf.Button ux:Name="save" Caption="Save" Clicked="{save}" />
+					<Panel Alignment="Center" Margin="20, 10, 20, 10">
+						<WhileTrue Value="{saveLoading}">
+							<Text Color="#F8F8F2">Saving...</Text>
+						</WhileTrue>
+						<WhileTrue Value="{saveSuccess}">
+							<Text Color="#A6E22E">Done.</Text>
+						</WhileTrue>
+						<WhileTrue Value="{saveError}">
+							<Text Color="#B92659">Failed.</Text>
+						</WhileTrue>
+					</Panel>
+					
+				</StackPanel>
+			</pf.Page>
+			<pf.Page>
+				<Panel Clicked="{addItem}">
+					<ScrollView>
+						<Panel>
+							<ColumnLayout ColumnCount="3"/>
+							<Each Items="{items}">
+								<Rectangle ux:Name="item" Color="{color}" Height="{height}" Margin="5" CornerRadius="5">
+									<AddingAnimation>
+										<Change item.Opacity="0" Duration="0.3" />
+									</AddingAnimation>
+								</Rectangle>
+							</Each>
+						</Panel>
+					</ScrollView>
+				</Panel>
+			</pf.Page>
+		</PageControl>
+	</ClientPanel>
+</App>
+

@@ -1,0 +1,10 @@
+<Panel ux:Class="pf.Input">
+	<string ux:Property="Value" />
+	<string ux:Property="Placeholder" />
+	<TextInput PlaceholderText="{Property Placeholder}" Value="{Property Value}" PlaceholderColor="#75715E" TextColor="#E6DB74" Height="40" Padding="10, 0, 10, 0" Margin="20, 10, 20, 10">
+        <Rectangle Layer="Background">
+            <Stroke Width="1" Brush="#F8F8F2" />
+        </Rectangle>
+	</TextInput>
+</Panel>
+				
